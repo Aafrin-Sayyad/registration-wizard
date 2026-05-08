@@ -1,0 +1,44 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --ink: #1a1209;
+  --ink-light: #4a3f2f;
+  --parchment: #faf6ee;
+  --parchment-dark: #f0e8d6;
+  --gold: #b8860b;
+  --gold-light: #d4a017;
+  --gold-pale: #f5ecd0;
+  --red: #8b1a1a;
+  --green: #1a4a2e;
+  --border: #c9b882;
+  --shadow: rgba(26,18,9,0.12);
+  --font: 'Times New Roman', Times, Georgia, serif;
+}
+
+html, body {
+  height: 100%;
+  background: var(--parchment);
+  font-family: var(--font);
+  color: var(--ink);
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  background:
+    radial-gradient(ellipse at 20% 20%, rgba(184,134,11,0.07) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 80%, rgba(139,26,26,0.05) 0%, transparent 60%),
+    var(--parchment);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--parchment-dark); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
